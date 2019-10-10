@@ -1,0 +1,15 @@
+#box
+  transform translate(10px, 10px)
+  transition 0.05s transform ease-out
+  width 40px
+  height 40px
+  background orange
+  border 5px solid red
+  cursor pointer
+  &.blink
+    animation: 0.4s linear blinking
+
+@keyframes blinking
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }

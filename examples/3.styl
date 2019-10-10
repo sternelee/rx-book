@@ -1,0 +1,20 @@
+colors = red orange yellow green cyan blue purple
+
+reverse(i)
+  100 - i
+
+.box
+  position absolute
+  transform translate(10px, 10px)
+  transition 0.1s transform ease-out
+  width 40px
+  height 40px
+  background orange
+  cursor pointer
+
+  for color, i in colors
+    &:nth-child({i + 1})
+      background color
+      z-index reverse(i)
+      if color != red
+        pointer-events: none
